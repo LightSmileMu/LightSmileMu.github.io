@@ -1,2 +1,0 @@
-# munb.github.io
-person
