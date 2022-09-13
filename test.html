@@ -14,28 +14,36 @@
 <div id="root"></div>
     <div>ddd</div>
 <script type="text/babel">
-class App extends React.Component {
-  state = {
-    date: null,
-  };
-  handleChange = date => {
-    antd.message.info(`您选择的日期是: ${date ? date.format('YYYY-MM-DD') : '未选择'}`);
-    this.setState({ date });
-  };
-  render() {
-    const { date } = this.state;
-    return (
-      <antd.ConfigProvider>
-        <div style={{ width: 400, margin: '100px auto' }}>
-          <antd.DatePicker onChange={this.handleChange} />
-          <div style={{ marginTop: 20 }}>
-            当前日期：{date ? date.format('YYYY-MM-DD') : '未选择'}
-          </div>
-        </div>
-      </antd.ConfigProvider>
-    );
-  }
-}
+const { Steps } = antd;
+
+const { Step } = Steps;
+
+const App = () => (
+<div>
+<div>
+<p>
+建筑部的入住标准是：密闭房间1小时，甲醛浓度不能超过 0.08 mg/立方， TVOC
+不超过 0.6mg/立方。
+</p>
+</div>
+<div>
+<antd.Steps direction="vertical" current={2}>
+<antd.Step title="拆除" description="一些可以拆的，占地方的墙的拆除" />
+<antd.Step title="水电改造" description="水电改造完成，等待面板安装" />
+<antd.Step title="防水" description="厨房卫生间一次防水完成" />
+<antd.Step title="贴瓷砖" description="厨房、客厅、卫生间、卧室、阳台" />
+<antd.Step title="吊顶" description="客厅吊顶完成" />
+<antd.Step title="刮腻子刷涂料" description="墙面粉刷" />
+<antd.Step title="开关五金安装" description="安装面板开关" />
+<antd.Step title="定制柜子" description="浴室柜、衣柜、鞋柜、橱柜等" />
+<antd.Step title="门窗" description="卧室门、厨房、卫生间门" />
+<antd.Step title="家电" description="空调、热水器、灯具" />
+<antd.Step title="开荒保洁" description="打扫卫生" />
+</antd.Steps>
+</div>
+</div>
+);
+
 ReactDOM.render(<App />, document.getElementById('root'));
 </script>
 </body>
