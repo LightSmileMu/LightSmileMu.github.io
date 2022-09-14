@@ -15,36 +15,61 @@
 <script type="text/babel">
 ReactDOM.render(
     <div style={{ margin: "25px" }}>
-    <div>
-      <p>
-        建筑部的入住标准是：密闭房间<span style={{ color: "red" }}>1小时</span>
-        ，甲醛浓度不能超过 <span style={{ color: "red" }}>0.08 mg/立方</span>，
-        TVOC 不超过<span style={{ color: "red" }}>0.6mg/立方</span> 。
-      </p>
-    </div>
-    <div>
-    <antd.Button type="primary">Primary</antd.Button>
-      <antd.Steps.Steps direction="vertical" current={3}>
-        <antd.Steps.Steps.Step title="拆除" description="一些可以拆的，占地方的墙的拆除" />
-        <antd.Steps.Steps.Step title="水电改造" description="水电改造完成，等待面板安装" />
-        <antd.Steps.Step title="防水" description="厨房卫生间一次防水完成" />
-        <antd.Steps.Step title="贴瓷砖" description="厨房、客厅、卫生间、卧室、阳台" />
-        <antd.Steps.Step title="吊顶" description="客厅吊顶完成" />
-        <antd.Steps.Step title="刮腻子刷涂料" description="墙面粉刷" />
-        <antd.Steps.Step title="开关五金安装" description="安装面板开关" />
-        <antd.Steps.Step title="灯具安装" description="客厅射灯、卧室灯、阳台灯" />
-        <antd.Steps.Step title="美缝" description="砖缝美缝" />
-        <antd.Steps.Step title="定制柜子" description="浴室柜、衣柜、鞋柜、橱柜等" />
-        <antd.Steps.Step
-          title="门窗安装"
-          description="卧室门、厨房、卫生间门，窗套，踢脚线"
-        />
-        <antd.Steps.Step title="卫浴" description="马桶、浴霸、淋浴" />
-        <antd.Steps.Step title="家电安装" description="空调、热水器、灯具" />
-        <antd.Steps.Step title="开荒保洁" description="打扫卫生" />
-      </antd.Steps.Steps>
-    </div>
-  </div>,
+          <div>
+            <p>
+              建筑部的入住标准是：密闭房间
+              <span style={{ color: "red" }}>1小时</span>
+              ，甲醛浓度不能超过{" "}
+              <span style={{ color: "red" }}>0.08 mg/立方</span>， TVOC 不超过
+              <span style={{ color: "red" }}>0.6mg/立方</span> 。
+            </p>
+          </div>
+          <div>
+            <antd.Steps direction="vertical" current={3}>
+              <antd.Steps.Step
+                title="拆除"
+                description="一些可以拆的，占地方的墙的拆除"
+              />
+              <antd.Steps.Step
+                title="水电改造"
+                description="水电改造完成，等待面板安装"
+              />
+              <antd.Steps.Step
+                title="防水"
+                description="厨房卫生间一次防水完成"
+              />
+              <antd.Steps.Step
+                title="贴瓷砖"
+                description="厨房、客厅、卫生间、卧室、阳台"
+              />
+              <antd.Steps.Step title="吊顶" description="客厅吊顶完成" />
+              <antd.Steps.Step title="刮腻子刷涂料" description="墙面粉刷" />
+              <antd.Steps.Step
+                title="开关五金安装"
+                description="安装面板开关"
+              />
+              <antd.Steps.Step
+                title="灯具安装"
+                description="客厅射灯、卧室灯、阳台灯"
+              />
+              <antd.Steps.Step title="美缝" description="砖缝美缝" />
+              <antd.Steps.Step
+                title="定制柜子"
+                description="浴室柜、衣柜、鞋柜、橱柜等"
+              />
+              <antd.Steps.Step
+                title="门窗安装"
+                description="卧室门、厨房、卫生间门，窗套，踢脚线"
+              />
+              <antd.Steps.Step title="卫浴" description="马桶、浴霸、淋浴" />
+              <antd.Steps.Step
+                title="家电安装"
+                description="空调、热水器、灯具"
+              />
+              <antd.Steps.Step title="开荒保洁" description="打扫卫生" />
+            </antd.Steps>
+          </div>
+        </div>,
     document.getElementById("root")
 );
 </script>
