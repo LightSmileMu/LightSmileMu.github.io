@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table> 
+        <thead> 
+         <tr> 
+          <th align="center">字符串</th> 
+          <th align="center">查找</th> 
+          <th align="center">替换</th> 
+          <th align="center">结果</th> 
+          <th align="center">功能</th> 
+         </tr> 
+        </thead> 
+        <tbody> 
+         <tr> 
+          <td align="center"><strong>hello world</strong></td> 
+          <td align="center"><strong>^.*$</strong></td> 
+          <td align="center"><strong>\U$0</strong></td> 
+          <td align="center">HELLO WORLD</td> 
+          <td align="center">小写转换为大写</td> 
+         </tr> 
+         <tr> 
+          <td align="center"><strong>hello world</strong></td> 
+          <td align="center"><strong>^(.*)$</strong></td> 
+          <td align="center"><strong>\U\1</strong></td> 
+          <td align="center">HELLO WORLD</td> 
+          <td align="center">小写转换为大写</td> 
+         </tr> 
+         <tr> 
+          <td align="center"><strong>hello world</strong></td> 
+          <td align="center"><strong>^(.*)$</strong></td> 
+          <td align="center"><strong>\U$1</strong></td> 
+          <td align="center">HELLO WORLD</td> 
+          <td align="center">小写转换为大写</td> 
+         </tr> 
+         <tr> 
+          <td align="center"><strong>HELLO WORLD</strong></td> 
+          <td align="center"><strong>^.*$</strong></td> 
+          <td align="center"><strong>\L$0</strong></td> 
+          <td align="center">hello world</td> 
+          <td align="center">大写字母转换为小写</td> 
+         </tr> 
+         <tr> 
+          <td align="center"><strong>HELLO WORLD</strong></td> 
+          <td align="center"><strong>^(.*)$</strong></td> 
+          <td align="center"><strong>\L\1</strong></td> 
+          <td align="center">hello world</td> 
+          <td align="center">大写字母转换为小写</td> 
+         </tr> 
+         <tr> 
+          <td align="center"><strong>HELLO WORLD</strong></td> 
+          <td align="center"><strong>^(.*)$</strong></td> 
+          <td align="center"><strong>\L$1</strong></td> 
+          <td align="center">hello world</td> 
+          <td align="center">大写字母转换为小写</td> 
+         </tr> 
+         <tr> 
+          <td align="center"><strong>hello world</strong></td> 
+          <td align="center"><strong>^.</strong></td> 
+          <td align="center"><strong>\U$0</strong></td> 
+          <td align="center">Hello world</td> 
+          <td align="center">首字母小写转换为大写</td> 
+         </tr> 
+         <tr> 
+          <td align="center"><strong>hello world</strong></td> 
+          <td align="center"><strong>^(.)</strong></td> 
+          <td align="center"><strong>\U$1</strong></td> 
+          <td align="center">Hello world</td> 
+          <td align="center">首字母小写转换为大写</td> 
+         </tr> 
+         <tr> 
+          <td align="center"><strong>hello world</strong></td> 
+          <td align="center"><strong>^(.)</strong></td> 
+          <td align="center"><strong>\U\1</strong></td> 
+          <td align="center">Hello world</td> 
+          <td align="center">首字母小写转换为大写</td> 
+         </tr> 
+         <tr> 
+          <td align="center"><strong>Hello world</strong></td> 
+          <td align="center"><strong>^.</strong></td> 
+          <td align="center"><strong>\L$0</strong></td> 
+          <td align="center">hello world</td> 
+          <td align="center">首字母大写转小写</td> 
+         </tr> 
+         <tr> 
+          <td align="center"><strong>Hello world</strong></td> 
+          <td align="center"><strong>^(.)</strong></td> 
+          <td align="center"><strong>\L$1</strong></td> 
+          <td align="center">hello world</td> 
+          <td align="center">首字母大写转小写</td> 
+         </tr> 
+         <tr> 
+          <td align="center"><strong>Hello world</strong></td> 
+          <td align="center"><strong>^(.)</strong></td> 
+          <td align="center"><strong>\L\1</strong></td> 
+          <td align="center">hello world</td> 
+          <td align="center">首字母大写转小写</td> 
+         </tr> 
+         <tr> 
+          <td align="center"><strong>hello world</strong></td> 
+          <td align="center"><strong>\b(\w)(\w*)\b</strong></td> 
+          <td align="center"><strong>\U$1\E$2</strong></td> 
+          <td align="center">Hello World</td> 
+          <td align="center">单词的首字母小写转换为大写</td> 
+         </tr> 
+         <tr> 
+          <td align="center"><strong>hello world</strong></td> 
+          <td align="center"><strong>\b(\w)(\w*)\b</strong></td> 
+          <td align="center"><strong>\U\1\E\2</strong></td> 
+          <td align="center">Hello World</td> 
+          <td align="center">单词的首字母小写转换为大写</td> 
+         </tr> 
+         <tr> 
+          <td align="center"><strong>hello world</strong></td> 
+          <td align="center"><strong>\b(\w)(\w*)\b</strong></td> 
+          <td align="center"><strong>\U$1$2</strong></td> 
+          <td align="center">HELLO WORLD</td> 
+          <td align="center">单词的首字母小写转换为大写</td> 
+         </tr> 
+        </tbody> 
+       </table>
+</body>
+</html>
