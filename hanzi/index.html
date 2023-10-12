@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/hanzi-writer@3.5/dist/hanzi-writer.min.js"></script>
+  </head>
+  <body>
+    <div style="text-align: center">
+      <input
+        type="text"
+        id="word"
+        placeholder="输入单个汉字"
+        maxlength="1"
+        style="margin-left: 2px"
+      />
+      <button id="animate-button" onclick="writeWord()">显示笔画顺序</button>
+    </div>
+    <div id="character-target-div" style="text-align: center; margin-top: 10px">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="200"
+        height="200"
+        id="grid-background-target"
+        style="border: 1px dashed #ddd"
+      >
+        <line
+          x1="0"
+          y1="0"
+          x2="200"
+          y2="200"
+          stroke="#DDD"
+          stroke-dasharray="2,2"
+        />
+        <line
+          x1="200"
+          y1="0"
+          x2="0"
+          y2="200"
+          stroke="#DDD"
+          stroke-dasharray="2,2"
+        />
+        <line
+          x1="100"
+          y1="0"
+          x2="100"
+          y2="200"
+          stroke="#DDD"
+          stroke-dasharray="2,2"
+        />
+        <line
+          x1="0"
+          y1="100"
+          x2="200"
+          y2="100"
+          stroke="#DDD"
+          stroke-dasharray="2,2"
+        />
+      </svg>
+    </div>
+    <script>
+      function writeWord() {
+        var svgId = "grid-background-target";
+        removeChildren(svgId);
+        var word = document.getElementById("word").value;
+        let writer = HanziWriter.create(svgId, word, {
+          width: 200,
+          height: 200,
+          padding: 5,
+          showOutline: true,
+          delayBetweenLoops: 1500,
+        }).loopCharacterAnimation();
+      }
+      function removeChildren(elementId) {
+        // Get a reference to the div element
+        var element = document.getElementById(elementId);
+
+        // 获取要保留的元素
+        var elementsToKeep = element.getElementsByTagName("line");
+
+        // Create an array to store the elements
+        var elementArray = [];
+        for (var i = 0; i < elementsToKeep.length; i++) {
+          elementArray.push(elementsToKeep[i]);
+        }
+
+        // Loop to remove each child until there are no children left
+        while (element.firstChild) {
+          element.removeChild(element.firstChild);
+        }
+
+        // 将要保留的元素重新添加到父元素中
+        elementArray.forEach(function (ele) {
+          element.appendChild(ele);
+        });
+      }
+    </script>
+  </body>
+</html>
