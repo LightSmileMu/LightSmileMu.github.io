@@ -7,15 +7,17 @@
     <script src="https://cdn.jsdelivr.net/npm/hanzi-writer@3.5/dist/hanzi-writer.min.js"></script>
   </head>
   <body>
-    <div style="text-align: center">
+    <div>
       <input
         type="text"
         id="word"
         placeholder="输入单个汉字"
         maxlength="1"
-        style="margin-left: 2px"
+        style="margin-left: 2px; font-size: 20px"
       />
-      <button id="animate-button" onclick="writeWord()">显示笔画顺序</button>
+      <button id="animate-button" onclick="writeWord()" style="font-size: 20px">
+        显示笔画
+      </button>
     </div>
     <div id="character-target-div" style="text-align: center; margin-top: 10px">
       <svg
